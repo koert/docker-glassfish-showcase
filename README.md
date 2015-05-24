@@ -8,18 +8,18 @@ Usage
 
 To create the image `glassfish-showcase`, execute the following command on the docker-glassfish folder:
 
-	docker build -t koert/glassfish-showcase .
+    docker build -t koert/glassfish-showcase .
 
 To run the image and bind to port :
 
-	docker run -d -p 8080:8080 koert/glassfish-showcase
+    docker run -d -p 8080:8080 koert/glassfish-showcase
 	
 You can access the showcase application with: http://localhost:8080/showcase
 
 More options:
-	docker run -d -p 4848:4848 -p 8080:8080 -p 9009:9009 \
-	  -v ~/tmp/glassfish/logs:/opt/glassfish4/glassfish/domains/domain1/logs \
-	  -e DEBUG="true" -e GLASSFISH_PASS="mypass" koert/glassfish-showcase
+    docker run -d -p 4848:4848 -p 8080:8080 -p 9009:9009 \
+	      -v ~/tmp/glassfish/logs:/opt/glassfish4/glassfish/domains/domain1/logs \
+	      -e DEBUG="true" -e GLASSFISH_PASS="mypass" koert/glassfish-showcase
 
 Ports: 
 - 4848: Glassfish administration console
@@ -35,7 +35,8 @@ Environment:
 - GLASSFISH_PASS: admin password for console on port 4848
 
 To run manually (debugging startup):
-docker run --rm -it -p 8080:8080 -p 4848:4848 koert/glassfish-showcase /bin/bash
-bash -x /opt/app/bin/start-glassfish.sh
+    docker run --rm -it -p 8080:8080 -p 4848:4848 koert/glassfish-showcase /bin/bash
+  
+    bash -x /opt/app/bin/start-glassfish.sh
 
 
