@@ -34,8 +34,8 @@ Environment:
 - DEBUG: true/false for debugging on port 9009
 - GLASSFISH_PASS: admin password for console on port 4848
 
-To run manually:
+To run manually (debugging startup):
 docker run --rm -it -p 8080:8080 -p 4848:4848 koert/glassfish-showcase /bin/bash
-# /opt/app/bin/start-glassfish.sh
+bash -x /opt/app/bin/start-glassfish.sh
 
 
