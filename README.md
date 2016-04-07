@@ -40,4 +40,9 @@ To run manually (debugging startup):
   
     bash -x /opt/app/bin/start-glassfish.sh
 
+Alpine Linux
+------------
+To create the image `alpine-glassfish-showcase`, execute the following command on the docker-glassfish folder:
+
+    docker build -t koert/alpine-glassfish-showcase -f Dockerfile-alpine .
 
